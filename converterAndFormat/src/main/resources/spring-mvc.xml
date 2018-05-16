@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:mvc="http://www.springframework.org/schema/mvc" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:p="http://www.springframework.org/schema/p"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans     
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context 
+        http://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/mvc
+        http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+        <context:component-scan base-package="com.convertAndFormat"/>
+        <!-- 该方式 主要是使用了convert进行数据转换 如果转换不过去 则会在界面报错 -->
+       <!--  <mvc:annotation-driven conversion-service="conversionService"/>
+        <bean id="conversionService" class="org.springframework.context.support.ConversionServiceFactoryBean">
+        	<property name="converters">
+        		<list>
+        			<bean class="com.convertAndFormat.convert.StringToConvert">
+        				<constructor-arg type="java.lang.String" value="yyyy-mm-dd"/>
+        			</bean>
+        		</list>
+        	</property>
+        </bean> -->
+        <!-- 使用format进行格式化 -->
+        <mvc:annotation-driven conversion-service="stringFormat"></mvc:annotation-driven>
+         <bean id="stringFormat" class="org.springframework.format.support.FormattingConversionServiceFactoryBean">
+        	<property name="formatters">
+        		<list>
+        			<bean class="com.convertAndFormat.format.StringToDateFormat">
+        				<constructor-arg type="java.lang.String" value="yyyy-mm-dd"/>
+        			</bean>
+        		</list>
+        	</property>
+        </bean>
+        
+        
+        <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        	<property name="prefix" value="/WEB-INF/jsp/"/>
+        	<property name="suffix" value=".jsp"></property>
+        </bean>
+ </beans>

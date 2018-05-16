@@ -1,0 +1,7 @@
+eclipse.m2.WorkspacelifecycleMappingsLocation=/Users/huan/work/javaworkspace/.metadata/.plugins/org.eclipse.m2e.core/lifecycle-mapping-metadata.xml
+eclipse.m2.defaultRuntime=maven_home
+eclipse.m2.runtimes=maven_home
+eclipse.m2.runtimesNodes/maven_home/location=/Users/huan/tools/apache-maven-3.5.3
+eclipse.m2.runtimesNodes/maven_home/type=EXTERNAL
+eclipse.m2.userSettingsFile=/Users/huan/tools/apache-maven-3.5.3/conf/settings.xml
+eclipse.preferences.version=1

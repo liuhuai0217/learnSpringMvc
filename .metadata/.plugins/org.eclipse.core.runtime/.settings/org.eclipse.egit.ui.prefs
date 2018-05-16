@@ -1,0 +1,4 @@
+always_use_staging_view=false
+auto_stage_on_commit=false
+commit_dialog_history_messages=<?xml version\="1.0" encoding\="UTF-8"?>\n<messages>\n<message>&\#x0A;&\#x0A;Change-Id\: I0000000000000000000000000000000000000000&\#x0A;</message>\n<message>&\#x0A;&\#x0A;Change-Id\: I0000000000000000000000000000000000000000&\#x0A;Signed-off-by\: liuhuai0217 &lt;liuhuai0217@163.com&gt;&\#x0A;</message>\n</messages>
+eclipse.preferences.version=1
