@@ -70,8 +70,8 @@
 	</section>
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
-			<item value="/Users/huan/work/javaworkspace/converterAndFormat"/>
 			<item value="/Users/huan/work/javaworkspace"/>
+			<item value="/Users/huan/work/javaworkspace/converterAndFormat"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
@@ -84,10 +84,16 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
+			<item value="appValidator.appValidator"/>
+			<item value="app07a.app07a"/>
 		</list>
 		<list key="groupId">
+			<item value="appValidator"/>
+			<item value="app07a"/>
 		</list>
 		<list key="artifactId">
+			<item value="appValidator"/>
+			<item value="app07a"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
@@ -98,6 +104,7 @@
 			<item value="[name]"/>
 		</list>
 		<list key="version">
+			<item value="1.0"/>
 			<item value="0.0.1-SNAPSHOT"/>
 		</list>
 	</section>

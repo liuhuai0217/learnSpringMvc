@@ -12,6 +12,7 @@ public class ProductController {
 	@RequestMapping("product_input")
 	public String productInput(Model model){
 		model.addAttribute("product", new Product());
+		System.out.println("hahhahahah");
 		return "ProductForm";
 	}
 }

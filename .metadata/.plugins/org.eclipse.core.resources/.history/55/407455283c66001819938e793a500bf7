@@ -1,0 +1,43 @@
+package com.fileUpload.controller;
+
+import java.io.File;
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.servlet.http.HttpServletRequest;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.multipart.MultipartFile;
+
+import com.fileUpload.bean.Product;
+
+@Controller
+public class ProductController {
+
+	@RequestMapping("project_input")
+	public String inputProduct(Model model){
+		model.addAttribute("product", new Product());
+		return "ProductForm";
+	}
+	@RequestMapping("project_save")
+	public String saveProject(@ModelAttribute Product product,HttpServletRequest req,Model model){
+		List<MultipartFile> images = product.getImages();
+		List<String> fileName = new ArrayList<>();
+		if(!images.isEmpty()){
+			for(MultipartFile m:images){
+				String imagename = m.getOriginalFilename();
+				fileName.add(imagename);
+				File imeageFile  =  new File(req.getServletContext().getRealPath("/image"),imagename);
+				try{
+					m.transferTo(imeageFile);
+				}catch(Exception e){
+					e.printStackTrace();
+				}
+			}
+		}
+		return "ProductDetail";
+	}
+}

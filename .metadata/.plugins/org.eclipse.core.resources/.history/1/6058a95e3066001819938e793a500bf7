@@ -1,0 +1,12 @@
+package com.fileUpload.bean;
+
+import java.io.Serializable;
+
+public class Product implements Serializable{
+
+	private String description;
+	
+	private Float price;
+					
+	private List<MultipartFile> images;
+}

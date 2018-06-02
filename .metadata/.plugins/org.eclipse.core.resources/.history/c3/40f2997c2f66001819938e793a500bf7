@@ -1,0 +1,5 @@
+package com.fileUpload.bean;
+
+public class Product {
+
+}

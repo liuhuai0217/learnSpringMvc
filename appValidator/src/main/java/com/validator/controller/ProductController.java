@@ -25,7 +25,8 @@ public class ProductController {
 		if(bindingResult.hasErrors()){
 			FieldError  error = bindingResult.getFieldError();
 			System.out.println("=======================");
-			System.out.println(error.getCode()+"    " +error.getField()+"   ");
+			System.out.println("getCode："+error.getCode()+"    f：" +error.getField()+"   m："+error.getDefaultMessage()+"  o："+error.getObjectName()+"   a："+error.getArguments()+"   r："+
+			error.getRejectedValue()+"  【】 "+error.getCodes());
 			return "ProductForm";
 		}
 		model.addAttribute("product",product);

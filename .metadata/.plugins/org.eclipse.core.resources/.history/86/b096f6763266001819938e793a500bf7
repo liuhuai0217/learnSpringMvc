@@ -1,0 +1,24 @@
+package com.fileUpload.controller;
+
+import javax.servlet.http.HttpServletRequest;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.fileUpload.bean.Product;
+
+@Controller
+public class ProductController {
+
+	@RequestMapping("project_input")
+	public String inputProduct(Model model){
+		model.addAttribute("product", new Product());
+		return "";
+	}
+	@RequestMapping("project_save")
+	public String saveProject(@ModelAttribute Product product,HttpServletRequest req,Model model){
+		return "";
+	}
+}

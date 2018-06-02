@@ -1,19 +1,2 @@
 INDEX VERSION 1.130+/Users/huan/work/javaworkspace/.metadata/.plugins/org.eclipse.jdt.core
-2912629391.index
-611002700.index
-1988470409.index
-1576807528.index
-1806228180.index
-2027542926.index
-1487188985.index
-123521920.index
-933541464.index
-816469537.index
-3202797554.index
-1403425367.index
-1892439234.index
-950761996.index
-3700971931.index
-1572323669.index
-3234888516.index
-3208843678.index
+1453278237.index
